@@ -1,0 +1,16 @@
+# JAVA / MAVEN
+target/
+*.class
+*.jar
+*.war
+*.ear
+*.log
+.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+# IDE
+.vscode/
+.classpath
+.project
+.settings/
