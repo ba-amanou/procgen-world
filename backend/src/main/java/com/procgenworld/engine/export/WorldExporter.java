@@ -11,6 +11,7 @@ public interface WorldExporter {
      * @param biomeGrid the resolved biome map, dimensions [width][height]
      * @param outputPath target file path 
      * @return the path of the written file
+     * @throws WorldExportException 
      */
-    Path exportToPng(Biome[][] biomeGrid, Path outputPath);
+    Path exportToPng(Biome[][] biomeGrid, Path outputPath) throws WorldExportException;
 }
