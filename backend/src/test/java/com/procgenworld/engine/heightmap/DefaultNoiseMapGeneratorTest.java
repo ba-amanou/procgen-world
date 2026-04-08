@@ -7,13 +7,17 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 
-public class DefaultHeightMapGeneratorTest {
+import com.procgenworld.engine.noisemap.DefaultNoiseMapGenerator;
+import com.procgenworld.engine.noisemap.NoiseMapConfig;
+import com.procgenworld.engine.noisemap.NoiseMapGenerator;
+
+public class DefaultNoiseMapGeneratorTest {
     
-    private HeightMapGenerator generator;
+    private NoiseMapGenerator generator;
 
     @BeforeEach
     void setUp() {
-        generator = new DefaultHeightMapGenerator(HeightMapConfig.defaults());
+        generator = new DefaultNoiseMapGenerator(NoiseMapConfig.defaults());
     }
 
     @Test
@@ -58,7 +62,7 @@ public class DefaultHeightMapGeneratorTest {
     @Test
     @DisplayName("Invalid config throws exception")
     void invalid_config_throws_exception() {
-        assertThatThrownBy(() -> new HeightMapConfig(-1.0, 4, 0.5))
+        assertThatThrownBy(() -> new NoiseMapConfig(-1.0, 4, 0.5))
                 .isInstanceOf(IllegalArgumentException.class)
                 .hasMessageContaining("scale must be positive");
     }    

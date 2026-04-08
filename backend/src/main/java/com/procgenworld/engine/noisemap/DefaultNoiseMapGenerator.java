@@ -1,17 +1,17 @@
-package com.procgenworld.engine.heightmap;
+package com.procgenworld.engine.noisemap;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 import com.procgenworld.engine.noise.PerlinNoise;
 
-public class DefaultHeightMapGenerator implements HeightMapGenerator {
+public class DefaultNoiseMapGenerator implements NoiseMapGenerator {
 
-    private static final Logger log = LoggerFactory.getLogger(DefaultHeightMapGenerator.class);
+    private static final Logger log = LoggerFactory.getLogger(DefaultNoiseMapGenerator.class);
 
-    private final HeightMapConfig config;
+    private final NoiseMapConfig config;
 
-    public DefaultHeightMapGenerator(HeightMapConfig config) {
+    public DefaultNoiseMapGenerator(NoiseMapConfig config) {
         this.config = config;
     }
 
