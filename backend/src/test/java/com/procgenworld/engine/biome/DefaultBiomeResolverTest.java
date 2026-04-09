@@ -52,18 +52,18 @@ class DefaultBiomeResolverTest {
     // ── BEACH ─────────────────────────────────────────────────────────────────
 
     @Test
-    @DisplayName("height in [0.45, 0.50[ resolves to BEACH")
+    @DisplayName("height in [0.45, 0.46[ resolves to BEACH")
     void in_beach_band_returns_beach() {
         assertThat(resolver.resolve(0.45, 0.5)).isEqualTo(Biome.BEACH);
-        assertThat(resolver.resolve(0.47, 0.0)).isEqualTo(Biome.BEACH);
-        assertThat(resolver.resolve(0.49, 1.0)).isEqualTo(Biome.BEACH);
+        assertThat(resolver.resolve(0.45, 0.0)).isEqualTo(Biome.BEACH);
+        assertThat(resolver.resolve(0.456, 1.0)).isEqualTo(Biome.BEACH);
     }
 
     @Test
     @DisplayName("humidity has no effect in BEACH zone")
     void humidity_irrelevant_for_beach() {
-        assertThat(resolver.resolve(0.47, 0.0)).isEqualTo(Biome.BEACH);
-        assertThat(resolver.resolve(0.47, 1.0)).isEqualTo(Biome.BEACH);
+        assertThat(resolver.resolve(0.45, 0.0)).isEqualTo(Biome.BEACH);
+        assertThat(resolver.resolve(0.45, 1.0)).isEqualTo(Biome.BEACH);
     }
 
     // ── PLAINS / FOREST ───────────────────────────────────────────────────────
@@ -87,11 +87,11 @@ class DefaultBiomeResolverTest {
     // ── MOUNTAIN ──────────────────────────────────────────────────────────────
 
     @Test
-    @DisplayName("height in ]0.65, 0.70] resolves to MOUNTAIN")
+    @DisplayName("height in ]0.65, 0.69] resolves to MOUNTAIN")
     void in_mountain_band_returns_mountain() {
         assertThat(resolver.resolve(0.651, 0.0)).isEqualTo(Biome.MOUNTAIN);
         assertThat(resolver.resolve(0.67,  0.5)).isEqualTo(Biome.MOUNTAIN);
-        assertThat(resolver.resolve(0.70,  1.0)).isEqualTo(Biome.MOUNTAIN);
+        assertThat(resolver.resolve(0.69,  1.0)).isEqualTo(Biome.MOUNTAIN);
     }
 
     @Test
