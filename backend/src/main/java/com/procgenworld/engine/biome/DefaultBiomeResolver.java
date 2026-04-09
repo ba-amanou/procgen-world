@@ -4,9 +4,9 @@ public class DefaultBiomeResolver implements BiomeResolver {
 
     private static final double DEEP_WATER_THRESHOLD = 0.35;
     private static final double OCEAN_THRESHOLD      = 0.45;
-    private static final double BEACH_THRESHOLD      = 0.50;
+    private static final double BEACH_THRESHOLD      = 0.46;
     private static final double MOUNTAIN_THRESHOLD   = 0.65;
-    private static final double SNOW_PEAKS_THRESHOLD = 0.70;
+    private static final double SNOW_PEAKS_THRESHOLD = 0.69;
 
     private static final double HUMIDITY_THRESHOLD = 0.5;
     
