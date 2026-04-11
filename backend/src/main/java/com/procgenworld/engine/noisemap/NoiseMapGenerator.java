@@ -1,6 +1,6 @@
-package com.procgenworld.engine.heightmap;
+package com.procgenworld.engine.noisemap;
 
-public interface HeightMapGenerator {
+public interface NoiseMapGenerator {
     
     /**
      * Generates a normalized height map.

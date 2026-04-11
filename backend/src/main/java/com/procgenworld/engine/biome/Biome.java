@@ -1,5 +1,5 @@
 package com.procgenworld.engine.biome;
 
 public enum Biome {
-    OCEAN, BEACH, PLAINS, FOREST, SNOW
+    DEEP_WATER, OCEAN, BEACH, PLAINS, FOREST, MOUNTAIN, SNOW_PEAKS
 }
